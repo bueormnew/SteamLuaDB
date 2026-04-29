@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GameDetail from './pages/GameDetail';
 import Navbar from './components/Navbar';
@@ -8,9 +8,10 @@ export default function App() {
   const [config, setConfig] = useState<any>(null);
 
   useEffect(() => {
-    fetch('/SteamLuaDB/config.json')
+    fetch('config.json')
       .then(res => res.json())
-      .then(data => setConfig(data));
+      .then(data => setConfig(data))
+      .catch(err => console.error("Error cargando config:", err));
   }, []);
 
   return (

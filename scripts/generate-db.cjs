@@ -3,7 +3,6 @@ const path = require('path');
 
 const gameDPath = path.join(__dirname, '../public/gameD');
 const outputPath = path.join(__dirname, '../public/database.json');
-const BASE_PATH = '/SteamLuaDB/'; // Nombre de tu repositorio
 
 function scanGames() {
     const games = [];
@@ -31,9 +30,9 @@ function scanGames() {
                 name: folder,
                 id: id,
                 description: description,
-                // Forzamos la ruta completa desde el inicio del dominio
-                icon: iconFile ? `${BASE_PATH}gameD/${folder}/${iconFile}` : null,
-                downloadUrl: zipFile ? `${BASE_PATH}gameD/${folder}/${zipFile}` : null,
+                // Rutas relativas simples para máxima compatibilidad
+                icon: iconFile ? `gameD/${folder}/${iconFile}` : null,
+                downloadUrl: zipFile ? `gameD/${folder}/${zipFile}` : null,
                 updatedAt: stats.mtime.getTime()
             });
         }
