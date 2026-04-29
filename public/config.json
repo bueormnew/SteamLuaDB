@@ -6,7 +6,7 @@
       "middleBanner": "0987654321",
       "bottomBanner": "1122334455"
     },
-    "enabled": false
+    "enabled": true
   },
   "support": {
     "text": "Soporte: discord.gg/tu-servidor",
