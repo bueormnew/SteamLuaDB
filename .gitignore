@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Construcción
+dist/
+public/database.json
+
+# Local env files
+.env*.local
+
+# Varios
+.DS_Store
+*.log
