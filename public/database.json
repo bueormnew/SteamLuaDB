@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Red Dead Redemption 2",
+    "id": "12345",
+    "description": "Nombre: Red Dead Redemption 2\r\nDescripción: Este es un script .lua avanzado para RDR2 que permite mejorar el rendimiento y añadir funcionalidades personalizadas en el modo historia.\r\nInstrucciones: Coloca el archivo en la carpeta scripts de tu cargador favorito.\r\n",
+    "icon": null,
+    "downloadUrl": "gameD/Red Dead Redemption 2/12345.zip",
+    "updatedAt": 1777421478959
+  }
+]
