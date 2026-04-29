@@ -8,7 +8,7 @@ export default function GameDetail({ config }: { config: any }) {
   const [game, setGame] = useState<any>(null);
 
   useEffect(() => {
-    fetch('/database.json')
+    fetch('database.json')
       .then(res => res.json())
       .then(data => {
         const found = data.find((g: any) => g.id === id);
