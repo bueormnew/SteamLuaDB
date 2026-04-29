@@ -1,0 +1,16 @@
+{
+  "adsense": {
+    "clientId": "ca-pub-XXXXXXXXXXXXXXXX",
+    "slots": {
+      "topBanner": "1234567890",
+      "middleBanner": "0987654321",
+      "bottomBanner": "1122334455"
+    },
+    "enabled": false
+  },
+  "support": {
+    "text": "Soporte: discord.gg/tu-servidor",
+    "url": "https://discord.gg/tu-servidor"
+  },
+  "siteName": "STEAM LUA DB"
+}
