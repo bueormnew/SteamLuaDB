@@ -1,13 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const gameDPath = path.join(__dirname, '../gameD');
+// Ahora buscamos DENTRO de public
+const gameDPath = path.join(__dirname, '../public/gameD');
 const outputPath = path.join(__dirname, '../public/database.json');
 
 function scanGames() {
     const games = [];
     if (!fs.existsSync(gameDPath)) {
-        console.error("No existe la carpeta gameD/");
+        console.error("No existe la carpeta public/gameD/");
         return;
     }
 
@@ -30,6 +31,7 @@ function scanGames() {
                 name: folder,
                 id: id,
                 description: description,
+                // La ruta debe ser relativa a la raíz de la web
                 icon: iconFile ? `gameD/${folder}/${iconFile}` : null,
                 downloadUrl: zipFile ? `gameD/${folder}/${zipFile}` : null,
                 updatedAt: stats.mtime.getTime()
@@ -37,7 +39,6 @@ function scanGames() {
         }
     });
 
-    // Ordenar por más recientes primero
     games.sort((a, b) => b.updatedAt - a.updatedAt);
 
     fs.writeFileSync(outputPath, JSON.stringify(games, null, 2));
