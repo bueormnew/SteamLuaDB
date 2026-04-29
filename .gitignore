@@ -5,7 +5,7 @@ node_modules/
 
 # Construcción
 dist/
-public/database.json
+# public/database.json  <-- Quitamos el ignore de aquí
 
 # Local env files
 .env*.local

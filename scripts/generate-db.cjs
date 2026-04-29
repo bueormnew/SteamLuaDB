@@ -30,7 +30,7 @@ function scanGames() {
                 name: folder,
                 id: id,
                 description: description,
-                // Rutas relativas simples para máxima compatibilidad
+                // Rutas relativas puras, sin barras iniciales
                 icon: iconFile ? `gameD/${folder}/${iconFile}` : null,
                 downloadUrl: zipFile ? `gameD/${folder}/${zipFile}` : null,
                 updatedAt: stats.mtime.getTime()

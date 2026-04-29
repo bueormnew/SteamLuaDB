@@ -10,7 +10,7 @@ export default function Home({ config }: { config: any }) {
   const query = searchParams.get('q')?.toLowerCase() || '';
 
   useEffect(() => {
-    fetch('database.json')
+    fetch('./database.json')
       .then(res => res.json())
       .then(data => {
         setGames(data);
