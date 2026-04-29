@@ -79,7 +79,7 @@ function GameCard({ game }: { game: any }) {
     >
       <div className="aspect-[3/4] relative overflow-hidden bg-white/5">
         {game.icon ? (
-          <img src={`/${game.icon}`} alt={game.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <img src={`${game.icon}`} alt={game.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-white/20 italic">Sin Imagen</div>
         )}

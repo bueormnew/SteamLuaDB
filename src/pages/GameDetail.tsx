@@ -31,7 +31,7 @@ export default function GameDetail({ config }: { config: any }) {
           <div className="md:col-span-2">
             <div className="aspect-[3/4] rounded-soft overflow-hidden bg-white/5 border border-white/10 shadow-2xl">
               {game.icon ? (
-                <img src={`/${game.icon}`} alt={game.name} className="w-full h-full object-cover" />
+                <img src={`${game.icon}`} alt={game.name} className="w-full h-full object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-white/20 italic text-xl">Sin Imagen</div>
               )}
@@ -45,7 +45,7 @@ export default function GameDetail({ config }: { config: any }) {
             
             <div className="flex flex-col sm:flex-row flex-wrap gap-6 mb-10">
               <a
-                href={`/${game.downloadUrl}`}
+                href={`${game.downloadUrl}`}
                 download
                 className="inline-flex items-center justify-center gap-4 bg-brand-accent hover:bg-blue-600 text-white font-black py-5 px-10 rounded-soft transition-all transform hover:scale-105 text-xl shadow-lg shadow-brand-accent/20"
               >
