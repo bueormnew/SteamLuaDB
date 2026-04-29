@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-// Ahora buscamos DENTRO de public
 const gameDPath = path.join(__dirname, '../public/gameD');
 const outputPath = path.join(__dirname, '../public/database.json');
+const BASE_PATH = '/SteamLuaDB/'; // Nombre de tu repositorio
 
 function scanGames() {
     const games = [];
@@ -31,9 +31,9 @@ function scanGames() {
                 name: folder,
                 id: id,
                 description: description,
-                // La ruta debe ser relativa a la raíz de la web
-                icon: iconFile ? `gameD/${folder}/${iconFile}` : null,
-                downloadUrl: zipFile ? `gameD/${folder}/${zipFile}` : null,
+                // Forzamos la ruta completa desde el inicio del dominio
+                icon: iconFile ? `${BASE_PATH}gameD/${folder}/${iconFile}` : null,
+                downloadUrl: zipFile ? `${BASE_PATH}gameD/${folder}/${zipFile}` : null,
                 updatedAt: stats.mtime.getTime()
             });
         }

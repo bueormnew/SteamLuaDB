@@ -8,7 +8,7 @@ export default function App() {
   const [config, setConfig] = useState<any>(null);
 
   useEffect(() => {
-    fetch('config.json')
+    fetch('/SteamLuaDB/config.json')
       .then(res => res.json())
       .then(data => setConfig(data));
   }, []);
